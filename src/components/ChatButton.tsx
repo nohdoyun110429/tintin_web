@@ -6,33 +6,16 @@ const ChatButton = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = () => {
-    const w = window as typeof window & {
-      Chatling?: { open?: () => void };
-      chtl?: { open?: () => void };
-    };
+    console.log("챗봇 상담 시작");
 
-    if (w.Chatling?.open) {
-      w.Chatling.open();
-      return;
+    // Chatling 챗봇 위젯을 강제로 여는 명령입니다.
+    if (window.Chatling) {
+      window.Chatling.open();
+    } else {
+      // 스크립트가 로드되지 않았을 경우를 대비한 안내
+      console.error("Chatling 스크립트가 아직 로드되지 않았습니다.");
+      alert("상담창을 불러오는 중입니다. 잠시 후 다시 시도해주세요!");
     }
-
-    if (w.chtl?.open) {
-      w.chtl.open();
-      return;
-    }
-
-    const launcher =
-      document.querySelector<HTMLElement>("#chtl-launcher") ??
-      document.querySelector<HTMLElement>("[data-chtl-launcher]") ??
-      document.querySelector<HTMLElement>(".chtl-launcher") ??
-      document.querySelector<HTMLElement>(".chatling-launcher");
-
-    if (launcher) {
-      launcher.click();
-      return;
-    }
-
-    console.warn("Chatling 위젯이 아직 준비되지 않았습니다.");
   };
 
   return (
