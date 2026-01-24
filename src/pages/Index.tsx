@@ -9,7 +9,6 @@ import ProductGrid from "@/components/ProductGrid";
 import ProductDetailModal from "@/components/ProductDetailModal";
 import CartDrawer from "@/components/CartDrawer";
 import Footer from "@/components/Footer";
-import ChatButton from "@/components/ChatButton";
 import { useToast } from "@/hooks/use-toast";
 import { loadTossPayments } from "@tosspayments/tosspayments-sdk";
 
@@ -204,7 +203,6 @@ const Index = () => {
         isProcessingCheckout={isProcessingCheckout}
       />
 
-      <ChatButton />
     </div>
   );
 };
