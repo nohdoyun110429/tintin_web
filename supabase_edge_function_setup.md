@@ -213,3 +213,4 @@ curl -X POST http://localhost:54321/functions/v1/approve-payment \
 - [Supabase Edge Functions 문서](https://supabase.com/docs/guides/functions)
 - [토스페이먼츠 결제 승인 API](https://docs.tosspayments.com/reference#%EA%B2%B0%EC%A0%9C-%EC%8A%B9%EC%9D%B8)
 
+

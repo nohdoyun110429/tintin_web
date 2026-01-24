@@ -102,3 +102,4 @@ ON orders(status);
 ### 오류: "duplicate key value"
 → `order_number`가 중복되었습니다. UNIQUE 제약 조건을 확인하세요.
 
+

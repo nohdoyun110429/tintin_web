@@ -58,3 +58,4 @@ CREATE TRIGGER update_orders_updated_at
 -- 이제 웹사이트에서 결제하면 orders 테이블에 저장됩니다.
 -- ============================================
 
+
