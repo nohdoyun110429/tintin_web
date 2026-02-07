@@ -1,0 +1,128 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bladeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#0d0d0d;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#050505;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="edgeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff0000;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#cc0000;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#990000;stop-opacity:0.5" />
+    </linearGradient>
+    <linearGradient id="handleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3a2a1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2a1a0a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a0a0a;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="darkGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background (transparent for better integration) -->
+  <rect width="400" height="400" fill="transparent"/>
+  
+  <!-- Katana Blade (검은색, 곡선 있는 카타나 형태) -->
+  <path d="M 200 60 Q 195 150 200 250 Q 205 300 200 320" 
+        stroke="url(#bladeGradient)" 
+        stroke-width="10" 
+        fill="none" 
+        filter="url(#glow)"
+        stroke-linecap="round"/>
+  
+  <!-- Blade body (검신 본체) -->
+  <path d="M 200 60 Q 195 150 200 250 Q 205 300 200 320" 
+        stroke="url(#bladeGradient)" 
+        stroke-width="12" 
+        fill="none" 
+        opacity="0.8"/>
+  
+  <!-- Blade edge (날 부분 - 빨간 빛) -->
+  <path d="M 200 60 Q 195 150 200 250 Q 205 300 200 320" 
+        stroke="url(#edgeGradient)" 
+        stroke-width="3" 
+        fill="none" 
+        opacity="0.7"
+        filter="url(#darkGlow)"/>
+  
+  <!-- Blade tip (끝부분 - 날카롭게) -->
+  <path d="M 200 60 L 195 50 L 200 55 Z" 
+        fill="#000000" 
+        stroke="#ff0000" 
+        stroke-width="1.5" 
+        opacity="0.8"
+        filter="url(#darkGlow)"/>
+  
+  <!-- Guard/Tsuba (호구) - 원형 -->
+  <circle cx="200" cy="300" r="15" 
+          fill="#0a0a0a" 
+          stroke="#ff0000" 
+          stroke-width="2" 
+          opacity="0.9"
+          filter="url(#darkGlow)"/>
+  <circle cx="200" cy="300" r="12" 
+          fill="#1a0a0a" 
+          stroke="#990000" 
+          stroke-width="1" 
+          opacity="0.7"/>
+  
+  <!-- Handle/Tsuka (손잡이) -->
+  <rect x="192" y="300" width="16" height="50" 
+        fill="url(#handleGradient)" 
+        stroke="#3a2a1a" 
+        stroke-width="1"
+        rx="2"/>
+  
+  <!-- Handle wrapping/Tsuka-ito (감싸는 끈) - 나선형 패턴 -->
+  <path d="M 200 310 Q 195 315 200 320 Q 205 315 200 310" 
+        stroke="#4a3a2a" 
+        stroke-width="2" 
+        fill="none"/>
+  <path d="M 200 325 Q 195 330 200 335 Q 205 330 200 325" 
+        stroke="#4a3a2a" 
+        stroke-width="2" 
+        fill="none"/>
+  <path d="M 200 340 Q 195 345 200 350 Q 205 345 200 340" 
+        stroke="#4a3a2a" 
+        stroke-width="2" 
+        fill="none"/>
+  
+  <!-- Blood drops (피 방울 - 검은 카타나의 특징) -->
+  <circle cx="200" cy="120" r="2.5" fill="#990000" opacity="0.7" filter="url(#darkGlow)"/>
+  <circle cx="200" cy="160" r="2" fill="#990000" opacity="0.6"/>
+  <circle cx="200" cy="200" r="1.5" fill="#990000" opacity="0.5"/>
+  <circle cx="200" cy="240" r="2" fill="#990000" opacity="0.6"/>
+  
+  <!-- Dark energy aura (어두운 기운) -->
+  <ellipse cx="200" cy="200" rx="50" ry="180" 
+           fill="none" 
+           stroke="#000000" 
+           stroke-width="2" 
+           opacity="0.4"/>
+  <ellipse cx="200" cy="200" rx="40" ry="160" 
+           fill="none" 
+           stroke="#1a0000" 
+           stroke-width="1" 
+           opacity="0.3"/>
+  
+  <!-- Blade shine (검신 반사광) -->
+  <path d="M 200 80 Q 198 150 200 220" 
+        stroke="#ffffff" 
+        stroke-width="1" 
+        fill="none" 
+        opacity="0.1"/>
+</svg>
+

@@ -1,0 +1,108 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rustGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b4513;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#654321;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#4a2c1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3a1f0a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bloodRust" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#990000;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#660000;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#330000;stop-opacity:0.4" />
+    </linearGradient>
+    <filter id="rustGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="400" fill="transparent"/>
+  
+  <!-- Chainsaw Body (전기톱 본체) -->
+  <rect x="80" y="160" width="240" height="80" rx="10" 
+        fill="url(#rustGradient)" 
+        stroke="#654321" 
+        stroke-width="3"
+        filter="url(#rustGlow)"/>
+  
+  <!-- Engine housing (엔진 하우징) -->
+  <ellipse cx="200" cy="200" rx="100" ry="35" 
+           fill="#4a2c1a" 
+           stroke="#654321" 
+           stroke-width="2"/>
+  
+  <!-- Chain guide bar (체인 가이드 바) -->
+  <rect x="320" y="190" width="60" height="20" rx="3" 
+        fill="#3a1f0a" 
+        stroke="#654321" 
+        stroke-width="2"/>
+  
+  <!-- Chain (체인) -->
+  <path d="M 200 200 L 350 200" 
+        stroke="#2a1a0a" 
+        stroke-width="8" 
+        stroke-linecap="round"
+        opacity="0.8"/>
+  
+  <!-- Chain teeth (체인 톱니) -->
+  <circle cx="240" cy="200" r="4" fill="#990000" opacity="0.8"/>
+  <circle cx="260" cy="200" r="4" fill="#990000" opacity="0.8"/>
+  <circle cx="280" cy="200" r="4" fill="#990000" opacity="0.8"/>
+  <circle cx="300" cy="200" r="4" fill="#990000" opacity="0.8"/>
+  <circle cx="320" cy="200" r="4" fill="#990000" opacity="0.8"/>
+  <circle cx="340" cy="200" r="4" fill="#990000" opacity="0.8"/>
+  
+  <!-- Handle (손잡이) -->
+  <rect x="100" y="220" width="40" height="60" rx="5" 
+        fill="url(#rustGradient)" 
+        stroke="#654321" 
+        stroke-width="2"/>
+  
+  <!-- Handle grip (손잡이 그립) -->
+  <rect x="105" y="225" width="30" height="50" rx="3" 
+        fill="#2a1a0a" 
+        opacity="0.7"/>
+  
+  <!-- Rust spots (녹슨 부분) -->
+  <circle cx="150" cy="180" r="8" fill="url(#bloodRust)" opacity="0.7"/>
+  <circle cx="220" cy="190" r="6" fill="url(#bloodRust)" opacity="0.7"/>
+  <circle cx="180" cy="210" r="7" fill="url(#bloodRust)" opacity="0.7"/>
+  <circle cx="250" cy="200" r="5" fill="url(#bloodRust)" opacity="0.7"/>
+  
+  <!-- Blood stains (피 얼룩) -->
+  <ellipse cx="200" cy="200" rx="15" ry="5" 
+           fill="#990000" 
+           opacity="0.6" 
+           transform="rotate(45 200 200)"/>
+  <ellipse cx="160" cy="220" rx="10" ry="4" 
+           fill="#990000" 
+           opacity="0.5" 
+           transform="rotate(-30 160 220)"/>
+  
+  <!-- Pull cord (시동 줄) -->
+  <line x1="200" y1="160" x2="200" y2="140" 
+        stroke="#2a1a0a" 
+        stroke-width="3" 
+        stroke-linecap="round"/>
+  <circle cx="200" cy="130" r="8" 
+          fill="#1a0a0a" 
+          stroke="#654321" 
+          stroke-width="2"/>
+  
+  <!-- Exhaust (배기구) -->
+  <rect x="120" y="170" width="20" height="15" rx="2" 
+        fill="#1a0a0a" 
+        opacity="0.8"/>
+  
+  <!-- Menacing aura (위협적인 오라) -->
+  <ellipse cx="200" cy="200" rx="140" ry="100" 
+           fill="none" 
+           stroke="#990000" 
+           stroke-width="1" 
+           opacity="0.2"/>
+</svg>
+
