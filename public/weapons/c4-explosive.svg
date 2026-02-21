@@ -1,0 +1,100 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="c4Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2a1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a1a0a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a05;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="c4Highlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4a4a2a;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#2a2a1a;stop-opacity:0.4" />
+    </linearGradient>
+    <filter id="c4Glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="400" fill="transparent"/>
+  
+  <!-- C4 Block (C4 블록) -->
+  <rect x="100" y="120" width="200" height="160" rx="8" 
+        fill="url(#c4Gradient)" 
+        stroke="#3a3a2a" 
+        stroke-width="3"
+        filter="url(#c4Glow)"/>
+  
+  <!-- C4 Highlight (하이라이트) -->
+  <rect x="100" y="120" width="200" height="50" rx="8" 
+        fill="url(#c4Highlight)" 
+        opacity="0.6"/>
+  
+  <!-- C4 Texture (텍스처) -->
+  <rect x="120" y="140" width="160" height="20" rx="2" 
+        fill="#1a1a0a" 
+        opacity="0.5"/>
+  <rect x="120" y="180" width="160" height="20" rx="2" 
+        fill="#1a1a0a" 
+        opacity="0.5"/>
+  <rect x="120" y="220" width="160" height="20" rx="2" 
+        fill="#1a1a0a" 
+        opacity="0.5"/>
+  
+  <!-- Detonator wire (도화선) -->
+  <line x1="200" y1="280" x2="200" y2="320" 
+        stroke="#ff0000" 
+        stroke-width="4" 
+        stroke-linecap="round"
+        opacity="0.8"/>
+  <line x1="200" y1="280" x2="200" y2="320" 
+        stroke="#ff6600" 
+        stroke-width="2" 
+        stroke-linecap="round"
+        opacity="0.6"/>
+  
+  <!-- Detonator (뇌관) -->
+  <circle cx="200" cy="320" r="12" 
+          fill="#ff0000" 
+          stroke="#cc0000" 
+          stroke-width="2"
+          opacity="0.9"/>
+  <circle cx="200" cy="320" r="8" 
+          fill="#ff6600" 
+          opacity="0.8"/>
+  <circle cx="200" cy="320" r="4" 
+          fill="#ffff00" 
+          opacity="0.9"/>
+  
+  <!-- Warning label (경고 라벨) -->
+  <rect x="130" y="200" width="140" height="40" rx="4" 
+        fill="#ff0000" 
+        opacity="0.3" 
+        stroke="#ff0000" 
+        stroke-width="1"/>
+  <text x="200" y="225" 
+        font-family="Arial, sans-serif" 
+        font-size="20" 
+        font-weight="bold" 
+        fill="#ff0000" 
+        text-anchor="middle" 
+        opacity="0.8">C4</text>
+  
+  <!-- Explosive symbol (폭발 표시) -->
+  <path d="M 200 160 L 210 170 L 200 180 L 190 170 Z" 
+        fill="#ff0000" 
+        opacity="0.6"/>
+  <circle cx="200" cy="170" r="3" 
+          fill="#ff6600" 
+          opacity="0.8"/>
+  
+  <!-- Danger aura (위험 오라) -->
+  <ellipse cx="200" cy="200" rx="120" ry="100" 
+           fill="none" 
+           stroke="#ff0000" 
+           stroke-width="1" 
+           opacity="0.2"/>
+</svg>
+

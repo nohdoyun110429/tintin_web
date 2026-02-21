@@ -1,0 +1,48 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+AppData/
+Contacts/
+Downloads/
+Favorites/
+IntelGraphicsProfiles/
+Links/
+Music/
+NTUSER.DAT*
+ntuser.dat*
+ntuser.ini
+Saved Games/
+Searches/
+Videos/
+.cursor/
+.gitconfig
+.idlerc/
+.node_repl_history
+
+# env
+VITE_SUPABASE_URL=https://xdxnvndnzziugiptuvys.supabase.co
+VITE_SUPABASE_ANON_KEY=sb_publishable_Fozq77Nh3-FdgrjVSme5Uw_ODT5IOQk
+VITE_OPENAI_API_KEY=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
