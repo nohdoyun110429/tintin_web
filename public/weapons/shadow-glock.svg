@@ -1,0 +1,96 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gunGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#050505;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="barrelGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadowGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="400" fill="transparent"/>
+  
+  <!-- Gun Body (권총 본체) -->
+  <rect x="120" y="180" width="160" height="60" rx="8" 
+        fill="url(#gunGradient)" 
+        stroke="#1a1a1a" 
+        stroke-width="2"
+        filter="url(#shadowGlow)"/>
+  
+  <!-- Grip (손잡이) -->
+  <path d="M 120 240 L 140 280 L 200 280 L 220 240 Z" 
+        fill="url(#gunGradient)" 
+        stroke="#1a1a1a" 
+        stroke-width="2"/>
+  
+  <!-- Grip texture (손잡이 텍스처) -->
+  <path d="M 140 250 L 160 270 L 180 270 L 200 250" 
+        stroke="#0a0a0a" 
+        stroke-width="1" 
+        fill="none" 
+        opacity="0.5"/>
+  
+  <!-- Barrel (총열) -->
+  <rect x="280" y="195" width="80" height="30" rx="4" 
+        fill="url(#barrelGradient)" 
+        stroke="#1a1a1a" 
+        stroke-width="2"/>
+  
+  <!-- Barrel tip (총구) -->
+  <circle cx="360" cy="210" r="12" 
+          fill="#000000" 
+          stroke="#1a1a1a" 
+          stroke-width="2"/>
+  <circle cx="360" cy="210" r="8" 
+          fill="#0a0a0a" 
+          opacity="0.8"/>
+  
+  <!-- Slide (슬라이드) -->
+  <rect x="140" y="180" width="140" height="50" rx="6" 
+        fill="#050505" 
+        stroke="#1a1a1a" 
+        stroke-width="1.5"/>
+  
+  <!-- Slide serrations (슬라이드 세레이션) -->
+  <line x1="160" y1="185" x2="160" y2="225" stroke="#0a0a0a" stroke-width="1" opacity="0.6"/>
+  <line x1="180" y1="185" x2="180" y2="225" stroke="#0a0a0a" stroke-width="1" opacity="0.6"/>
+  <line x1="200" y1="185" x2="200" y2="225" stroke="#0a0a0a" stroke-width="1" opacity="0.6"/>
+  <line x1="220" y1="185" x2="220" y2="225" stroke="#0a0a0a" stroke-width="1" opacity="0.6"/>
+  <line x1="240" y1="185" x2="240" y2="225" stroke="#0a0a0a" stroke-width="1" opacity="0.6"/>
+  <line x1="260" y1="185" x2="260" y2="225" stroke="#0a0a0a" stroke-width="1" opacity="0.6"/>
+  
+  <!-- Trigger guard (방아쇠 가드) -->
+  <path d="M 200 240 Q 220 250 240 240 Q 240 260 220 260 Q 200 260 200 240" 
+        fill="none" 
+        stroke="#1a1a1a" 
+        stroke-width="2"/>
+  
+  <!-- Trigger (방아쇠) -->
+  <rect x="205" y="250" width="8" height="20" rx="2" 
+        fill="#0a0a0a" 
+        stroke="#1a1a1a" 
+        stroke-width="1"/>
+  
+  <!-- Shadow effect (그림자 효과) -->
+  <ellipse cx="200" cy="280" rx="100" ry="20" 
+           fill="#000000" 
+           opacity="0.3"/>
+  
+  <!-- Dark aura (어두운 오라) -->
+  <ellipse cx="200" cy="220" rx="120" ry="80" 
+           fill="none" 
+           stroke="#000000" 
+           stroke-width="1" 
+           opacity="0.2"/>
+</svg>
+
